@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>可画健身俱乐部</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== 基础 ===== */
+body {
+  margin: 0;
+  font-family: "Microsoft YaHei", Arial;
+  background: #0f0f0f;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* ===== 按钮 ===== */
+.btn {
+  display: inline-block;
+  background: #ffd700;
+  color: #000;
+  padding: 14px 36px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* ===== Banner ===== */
+.hero {
+  height: 90vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=80")
+    center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+}
+
+/* ===== 通用区块 ===== */
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #ffd700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 50px;
+}
+
+/* ===== 团队 ===== */
+.team {
+  background: #161616;
+}
+
+.team-flex {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.team-text {
+  flex: 1;
+}
+
+.team-imgs {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* ===== 服务 ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.service-card img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-label {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* ===== 案例 ===== */
+.cases {
+  background: #161616;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.case-card {
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.case-info {
+  padding: 20px;
+  background: #ffd700;
+  color: #000;
+}
+
+/* ===== 联系我们 ===== */
+.contact {
+  background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80")
+    center / cover no-repeat;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  color: #ffd700;
+  margin-bottom: 40px;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #ffd700;
+  color: #000;
+  text-align: center;
+  padding: 30px;
+  font-weight: 600;
+}
+
+/* ===== 响应式 ===== */
+@media(max-width:768px){
+  .team-flex, .services-grid, .case-grid {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Banner -->
+<section class="hero">
+  <div>
+    <h1>练就最好的自己</h1>
+    <a href="#contact" class="btn">即刻加入</a>
+  </div>
+</section>
+
+<div class="container">
+
+<!-- 团队介绍 -->
+<section class="section team">
+  <h2 class="section-title">了解我们的健身团队</h2>
+  <div class="team-flex">
+    <div class="team-text">
+      <p>
+        可画健身俱乐部由 Bobby 和 Dora Graff 夫妻于 2001 年创立。
+        目前我们已在全国开设超过 115 家门店，致力于提供专业、科学的健身体验。
+      </p>
+    </div>
+    <div class="team-imgs">
+      <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=600&q=80">
+      <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=600&q=80">
+    </div>
+  </div>
+</section>
+
+<!-- 服务 -->
+<section class="section">
+  <h2 class="section-title">我们提供的服务</h2>
+  <p class="subtitle">专业 · 科学 · 高效</p>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1571388208499-258b57e5a3a2?auto=format&fit=crop&w=800&q=80">
+      <div class="service-label">俱乐部参观</div>
+    </div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80">
+      <div class="service-label">了解团课</div>
+    </div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=800&q=80">
+      <div class="service-label">咨询私教</div>
+    </div>
+  </div>
+</section>
+
+<!-- 健身前后 -->
+<section class="section cases">
+  <h2 class="section-title">健身前后</h2>
+
+  <div class="case-grid">
+    <div class="case-card">
+      <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=600&q=80">
+      <div class="case-info">
+        <p>客户真实反馈，见证改变的力量。</p>
+        <strong>Donna · 31岁</strong>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <img src="https://images.unsplash.com/photo-1519699047748-de008c9c23ea?auto=format&fit=crop&w=600&q=80">
+      <div class="case-info">
+        <p>科学训练，让身材更健康。</p>
+        <strong>Lauren · 28岁</strong>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <img src="https://images.unsplash.com/photo-1504285209704-ef227f62ff24?auto=format&fit=crop&w=600&q=80">
+      <div class="case-info">
+        <p>坚持，是最好的捷径。</p>
+        <strong>Thomas · 44岁</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- 联系我们 -->
+<section id="contact" class="contact">
+  <h2>马上联系我们吧</h2>
+  <p>深圳市南山区金色商业街001号</p>
+  <p>cnsupport@canva.com</p>
+  <p>001-12345678</p>
+</section>
+
+<footer>
+  © 2026 可画健身俱乐部 Canva Fitness Club
+</footer>
+
+</body>
+</html>
